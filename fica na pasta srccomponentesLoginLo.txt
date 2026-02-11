@@ -1,0 +1,25 @@
+fica na pasta src/componentes/Login/Login.jsx
+fazer style.module.css na mesma pasta
+
+
+const Login = () => {
+// Bloco no qual irá ser chamada a API do Login -> /login
+
+return (
+<>
+<h1 className={style.title_login}>Login</h1>
+<form actions="">
+<label htmlFor=">E-mail</label>
+<input type="text" id="email"/>
+<br></br>
+<label htmlFor="">Senha</label>
+<input type="text" id="senha"/>
+<br><br>
+<button>Entrar</button>
+</form>
+</>
+);
+
+}
+
+export default Login;
