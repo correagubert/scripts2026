@@ -14,7 +14,7 @@ import 'react-toastify/dist/ReactToastify.css'
 // Rotas
 import './index.css'
 import Login from './pages/login/Login.jsx'
-import Cadastro from './pages/cadastro/Cadastro.jsx'
+import Cadastro from './pages/Cadastro/Cadastro.jsx'
 import Dashboard from './pages/dashboard/Dashboard.jsx'
 
 const router = createBrowserRouter([

@@ -1,13 +1,14 @@
-import axios from 'axios'
-import React, {useState} from 'react'
-import {toast} from 'react-toastify'
+import axios from 'axios';
+import React, {useState, useEffect} from 'react';
+import {useNavigate} from 'react-router-dom';
+import {toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const RegistrarUsuario = () => {
+export function RegistrarUsuario() {
     const [nome, setNome] = useState('')
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
     const [confirmarSenha, setConfirmarSenha] = useState('')
-    const [cargo, setCargo] = useState('')
     // Verificação de Senhas (Correspondência)
     const [isSenhasMatch, setIsSenhasMatch] = useState(true)
     const [isSaving, setIsSaving] = useState(false)
@@ -16,7 +17,6 @@ const RegistrarUsuario = () => {
     const handleEmailChange = (e) => setEmail(e.target.value)
     const handleSenhaChange = (e) => setSenha(e.target.value)
     const handleConfirmarSenhaChange = (e) => setConfirmarSenha(e.target.value)
-    const handleCargoChange = (e) => setCargo(e.target.value)
     // Validação do Campo de Senha
     const isSenhaValid = () => senha.length >= 8 && senha === confirmarSenha
     // Limpeza do Formulário Após o Envio
@@ -25,7 +25,6 @@ const RegistrarUsuario = () => {
         setEmail('')
         setSenha('')
         setConfirmarSenha('')
-        setCargo('')
         setIsSenhasMatch(true)
     }
 
@@ -43,7 +42,6 @@ const RegistrarUsuario = () => {
                 nome: nome,
                 email: email,
                 senha: senha,
-                cargo: cargo
             })
 
             resetForm()
@@ -78,12 +76,9 @@ return (
 
             <div>
                 <label htmlFor="emailRegisterUser" className='block text-sm font-medium mb-1'>Email</label>
-                <input type="email" id='emailRegisterUser' value={email} onChange={handleEmailChange} required className='w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' />                </div>
-
-            <div>
-                <label htmlFor="cargoRegisterUser" className='block text-sm font-medium mb-1'>Cargo</label>
-                <input type="text" id='cargoRegisterUser' value={cargo} onChange={handlesetCargoChange} required className='w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' />
+                <input type="email" id='emailRegisterUser' value={email} onChange={handleEmailChange} required className='w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' />
             </div>
+
 
             <div>
                 <label htmlFor="passwordRegisterUser" className='block text-sm font-medium mb-1'>Senha</label>
