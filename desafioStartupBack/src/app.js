@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 const app = express();
 
-const veiculoRouter = require('./routers/veiculo.js');
+const veiculoRouter = require('./routes/veiculo.js');
 app.use('/veiculo', veiculoRouter);
 
 app.use(cors());
