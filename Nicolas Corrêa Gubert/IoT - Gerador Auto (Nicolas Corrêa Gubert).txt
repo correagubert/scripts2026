@@ -1,0 +1,20 @@
+Ideia de IoT para um gerador elétrico pequeno automático, capaz de regular distribuição elétrica em uma área pequena.
+
+Nome do Projeto:
+Energi-Eye
+
+A Questão (Problema/Justificativa):
+Em uma casa em ambiente mais isolado, que receba eletricidade através de um gerador grande, pode ser uma preocupação o desgaste do mesmo, uso de combustíveis e outros fatores que possam virar complicações maiores com o tempo. Por isso, seria interessante a integração dentro do gerador de um sensor de atividade, que pudesse diminuir seu output para manter apenas eletrônicos vitais ligados quando não estão sendo usados.
+
+Como o Sistema Sentiria (Sensores):
+O gerador se conecta com a parte elétrica interna da casa. Em quartos que não há atividade, após um determinado tempo sem movimento, um controlador enviaria um sinal para o sistema integrado ao gerador, dizendo para reduzir a corrente direcionada ao setor da casa sem movimentação. Isso exigiria uma elétrica complexa.
+
+Para Onde os Dados Vão (Sistema):
+O gerador poderia ser interagido com um programa rodando em um sistema operacional (ex. Windows IoT). Dentro do programa haveria um esquema mostrando os quartos da casa, relatando o consumo elétrico e atividade em cada quarto. O direcionamento de eletricidade aos quartos poderia ser operado tanto através desse sistema quanto remotamente de forma automática (como descrito antes, a corrente diminuiria para quartos sem atividade).
+
+Como São Tratados (Tratamento e Interpretação de Dados):
+Como dito antes, após o sinal ser enviado pela controladora para o programa integrado ao gerador, este programa devolve um comando pedindo o bloqueio/restrição de distribuição de energia elétrica para o quarto. Certos focos elétricos podem ser ignorados se estiverem ativos, ou seja em uso (ex. uma geladeira na tomata refrigerando, um celular carregando na tomada). Isso pode ser configurado através do programa no gerador.
+
+Pipeline:
+
+Sensor reconhece falta de atividade -> Controlador do sensor envia sinal para o programa integrado ao gerador -> Programa interpreta o não-uso de energia elétrica no quarto em que o sensor está instalado -> Programa devolve sinal restringindo a corrente elétrica -> Sensor fica inativo até reconhecer atividade novamente
