@@ -11,7 +11,7 @@ CREATE TABLE `lanchonete_bola`.`produto` (
   PRIMARY KEY (`id`));
 
 INSERT INTO `lanchonete_bola`.`produto` (`nome`, `valor`, `descricao`, `ativo`) VALUES
-('X-Burguer', 15.90, 'Hambúrguer com queijo, alface e tomate', 1),
+('X-Burger', 15.90, 'Hambúrguer com queijo, alface e tomate', 1),
 ('X-Salada', 17.50, 'Hambúrguer com queijo, presunto, alface e tomate', 1),
 ('X-Bacon', 19.90, 'Hambúrguer com queijo, bacon crocante e molho especial', 1),
 ('X-Tudo', 24.90, 'Hambúrguer completo com bacon, ovo, presunto e queijo', 1),

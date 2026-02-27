@@ -40,7 +40,7 @@ const addProdutos = async (req, res) => {
         const nomeProduto = req.body.nome
         const descricaoProduto = req.body.descricao
         const valorProduto = req.body.valor
-        const [results] = await db.query('INSERT INTO produto (nome, descricao, valor) VALUES (?, ?, ?)', [nomeProduto, descricaoProduto, valorProduto]);
+        const [results] = await db.query('INSERT INTO produto (nome, descricao, valor, ativo) VALUES (?, ?, ?, ?)', [nomeProduto, descricaoProduto, valorProduto, 1]);
         return res.status(200).json({ message: 'Produto adicionado com sucesso!', data: results })
     } catch (error) {
         res.status(400).json({ message: 'Erro ao adicionar o produto.', error: error.message })

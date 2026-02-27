@@ -65,27 +65,44 @@ const Produto = () => {
             };
             if (modo === "create") {
                 const ok = await addProdutos(payload);
-                if(!ok) { 
-                    console.log("Não foi possível adicionar o produto.");
-                    return;
+                if(ok === "") { 
+                    alert("Não foi possível adicionar o produto.");
+                    return false;
                 }
+                alert("Produto adicionado com sucesso!");
             }else{
                 // Se for modo de edição
                 if(!produtoSelecionado.id) {
-                    console.log("Nenhum produto selecionado.");
-                    return;
+                    alert("Nenhum produto selecionado.");
+                    return false;
                 }
                 const ok = await editProdutos(produtoSelecionado.id, payload);
-                if(!ok) {
-                    console.log("Não foi possível editar o produto.");
-                    return;
+                if(ok === "") {
+                    alert("Não foi possível editar o produto.");
+                    return false;
                 } 
-
+                alert("Produto editado com sucesso!");
+            }
                 await carregaProduto();
                 fecharModal();
-            }
         } catch (error) {
             console.log("Erro", error);
+        }
+    }
+
+    const remove = async (id) => {
+        if(!window.confirm("Tem certeza que deseja excluir este produto?")) return;
+        try {
+            const deleted = await deleteProdutos(id);
+            if(deleted === "") {
+                alert("Não foi possível excluir o produto.");
+                return false;
+            }
+            alert("Produto excluído com sucesso!");
+            carregaProduto();
+        } catch (error) {
+            console.log("Erro ao excluir produto:", error);
+            console.error("Deu ruim:", error);
         }
     }
 
@@ -112,7 +129,7 @@ const Produto = () => {
                             <td>{p.valor}</td>
                             <td>
                                 <button className="btn btn-primary" onClick={() => abrirModalEdicao(p)}>Editar</button>
-                                <button className="btn btn-danger" onClick={() => remover(p.id)}>Excluir</button>
+                                <button className="btn btn-danger" onClick={() => remove(p.id)}>Excluir</button>
                             </td>
                         </tr>
                     ))}
