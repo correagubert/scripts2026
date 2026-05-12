@@ -9,6 +9,10 @@ function FormUsuario() {
             <input type="text" name='nome' id='nome' placeholder='Nome de Usuário' />
         </div>
         <div>
+            <label htmlFor="cpfcnpj">CPF/CNPJ:</label>
+            <input type="text" name='cpfcnpj' id='cpfcnpj' placeholder='CPF/CNPJ' />
+        </div>
+        <div>
             <label htmlFor="email">Email:</label>
             <input type="text" name='email' id='email' placeholder='Email' />
         </div>
