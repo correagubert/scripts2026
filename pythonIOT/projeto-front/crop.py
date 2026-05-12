@@ -1,0 +1,16 @@
+from flask import Flask, render_template, request
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+@app.route("/enviar", methods=["POST"])
+def enviar():
+    nome = request.form.get("name", "").strip()
+    if not nome:
+        return "O nome é obrigatório."
+    return f"Olá, {nome}! O backend recebeu seu formulário com sucesso."
+
+if __name__ == "__main__":
+    app.run(debug=True)
