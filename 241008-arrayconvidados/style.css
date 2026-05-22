@@ -1,0 +1,8 @@
+#titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 25px solid crimson;
+    /* height: 20px; */
+}

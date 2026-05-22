@@ -1,0 +1,17 @@
+/* .flex{
+    padding: 25px;
+    height: 500px;
+    background-color: #FFFFFF;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .item{
+    background-color: aqua;
+  } */

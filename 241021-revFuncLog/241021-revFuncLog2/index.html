@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h2>Sistema de Login</h2>
+        </div>
+        <div class="crud">
+            <h3>Cadastro de Usuário</h3>
+            <label for="userAdd">Nome de Usuário:</label>
+            <input type="text" placeholder="Ex. correagubert" id="userAdd"><br>
+            <label for="password">Senha:</label>
+            <input type="password" id="password"><br>
+            <button onclick="add()" id="adiciona">Cadastrar</button>
+        </div>
+        <div class="crud">
+            <h3>Login</h3>
+            <label for="userLogin">Nome de Usuário:</label>
+            <input type="text" placeholder="Ex. correagubert" id="userLogin"><br>
+            <label for="pass">Senha:</label>
+            <input type="password" id="pass"><br>
+            <button onclick="login()" id="logar">Entrar</button>
+        </div>
+        <div class="crud">
+            <h3>Editar</h3>
+            <label for="userEdit">Nome de Usuário:</label>
+            <input type="text" placeholder="Ex. correagubert" id="userEdit"><br>
+            <button onclick="edit()" id="edit">Editar</button>
+        </div>
+        <div class="crud">
+            <h3>Excluir</h3>
+            <label for="userDelete">Nome de Usuário:</label>
+            <input type="text" placeholder="Ex. correagubert" id="userDelete"><br>
+            <button onclick="remove()" id="delete">Excluir</button>
+        </div>
+    </div>
+        
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEECROWD - Exercícios do dia 19/09/2024</title>
+</head>
+<body>
+    <header id="titulo">
+        <h1>"All night STAGEFRIGHT, on with the show!"</h1>
+    </header>
+    <hr>
+    <h6>Ignore o título, é só fachada.</h6>
+    <hr>
+    <button onclick="bc1038()">Ex.1038 do beecrowd</button><br><br>
+    <script>
+    function bc1038(){
+        let qtd, precoTotal
+        let codigo = Number(prompt("Digite o código do lanche que deseja comprar:"))
+        qtd = Number(prompt("Quantas unidades?"))
+        let preco
+        if(codigo==1){
+            preco = 4.00
+        }else if(codigo==2){
+            preco = 4.50
+        }else if(codigo==3){
+            preco = 5.00
+        }else if(codigo==4){
+            preco = 2.00
+        }else if(codigo==5){
+            preco = 1.50
+        }
+        precoTotal = preco*qtd
+        alert("O total dessa compra será R$"+precoTotal+". Obrigado por comprar conosco! Continue nos dando o seu dinheiro!")
+    }
+    </script>
+</body>
+</html>

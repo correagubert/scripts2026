@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=600, initial-scale=1.0">
+    <title>Teste em HTML 🤠</title>
+</head>
+<body style="text-align: center;">
+    <!--Esse é um comentário.-->
+    <p>Qual é o seu nome?</p>
+    <label for="nome">O Meu Nome É:</label>
+    <input id="nome" type="text" placeholder="Corrêa Gubert">
+    <button onclick="boasVindas()">Login</button><br><br>
+    <button onclick="parOuImpar()">Par ou Ímpar</button><br><br>
+    <button onclick="convTemp()">Clique aqui para converter temperaturas!</button><br><br>
+    <button onclick="multaPesca()">Calcule o peso pescado aqui!</button><br><br>
+    <button onclick="calcMedia()">Clique aqui para calcular sua média!</button><br><br>
+    <button onclick="calcVolume()">Clique aqui para calcular seu volume!</button><br><br>
+    <script>
+        function boasVindas(){
+            let nome = document.getElementById("nome").value;
+            let ano = prompt("Bem vindo, "+nome+"! Digite seu ano de nascimento para confirmar seu login.");
+            if(2024 - ano >17){
+                alert("Você tem "+(2024 - ano)+" anos. Login efetuado.")
+            } else {
+                alert("Volte quando for maior de idade!")
+            }
+        }
+
+        function parOuImpar(){
+            let n = prompt("Escreva um número!")
+            if (n%2 == 0) {
+                alert(n+" é par!")
+            } else {
+                alert(n+" é ímpar!")
+            }
+        }
+
+        function convTemp(){
+            let r=Number, t=Number
+            let option = Number (prompt("Qual conversão você gostaria de fazer?\n1. Celsius para Fahrenheit\n2. Fahrenheit para Celsius\n3. Celsius para Kelvin\n4. Kelvin para Celsius\n5. Fahrenheit para Kelvin\n6. Kelvin para Fahrenheit"))
+            switch (option){
+            case 1:
+                t = prompt("Digite a temperatura em Celsius.")
+                r = (t*1.8)+32
+                alert("Resultado: "+r+"F")
+                break
+            case 2:
+                t = prompt("Digite a temperatura em Fahrenheit.\n")
+                r = (t-32)*(5/9)
+                alert("Resultado: "+r+"°")
+                break
+            case 3:
+                let t = Number (prompt("Digite a temperatura em Celsius.\n"))
+                r = t+273.15
+                alert("Resultado: "+r+"K")
+                break
+            case 4:
+                t = prompt("Digite a temperatura em Kelvin.\n")
+                r = t-273.15
+                alert("Resultado: "+r+"°")
+                break
+            case 5:
+                t = prompt("Digite a temperatura em Fahrenheit.\n")
+                r = (t-32)*(5/9)+273.15
+                alert("Resultado: "+r+"K")
+                break
+            case 6:
+                t = prompt("Digite a temperatura em Kelvin.\n")
+                r = (t-273.15)*(9/5)+32
+                alert("Resultado: "+r+"F")
+                break
+            //if (option>6){
+                //alert("Opção indisponível.")
+            //}
+            case (option>6):
+                alert("Opção indisponível.")
+            }
+        }
+
+        function multaPesca(){
+            let pperm = Number (prompt("Digite o peso máximo permitido."))
+            let ppesc = Number (prompt("Digite o peso pescado."))
+            let mperm = Number (prompt("Digite a multa em reais por quilo excedido."))
+            let d=Number; multa=Number
+            if (ppesc > pperm) {
+                d = ppesc - pperm
+                multa = d*mperm
+                alert("O peso máximo foi excedido em "+d+" quilos. Portanto, a multa a pagar será de "+multa+" reais.")
+            } else {
+                alert("O peso pescado está dentro dos conformes.")
+            }
+        }
+
+        function calcMedia(){
+            let n1 = Number (prompt("Digite o primeiro número."))
+            let n2 = Number (prompt("Digite o segundo número."))
+            let media
+            media = (n1+n2)/2
+            alert("A média é "+media)
+        }
+
+        function calcVolume(){
+            let a = prompt("Digite a altura.")
+            let c = prompt("Digite o comprimento.")
+            let l = prompt("Digite a largura.")
+            let vol
+            vol = a*c*l
+            alert("O volume é: "+vol)
+        }
+    </script>
+</body>
+</html>

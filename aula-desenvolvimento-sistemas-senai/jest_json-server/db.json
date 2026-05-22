@@ -1,0 +1,41 @@
+{
+  "users": [
+    {
+      "name": "Ana",
+      "email": "ana@example.com",
+      "id": 5
+    },
+    {
+      "name": "Carlos",
+      "email": "carlos@example.com",
+      "id": 6
+    },
+    {
+      "name": "Ana",
+      "email": "ana@example.com",
+      "id": 7
+    },
+    {
+      "name": "Carlos",
+      "email": "carlos@example.com",
+      "id": 8
+    },
+    {
+      "name": "Ana",
+      "email": "ana@example.com",
+      "id": 9
+    }
+  ],
+  "clients": [
+    {
+      "name": "Adão",
+      "email": "costelinha@ywhw.org",
+      "id": 1
+    },
+    {
+      "name": "Eva",
+      "email": "macadoamor@ywhw.org",
+      "id": 2
+    }
+  ]
+}

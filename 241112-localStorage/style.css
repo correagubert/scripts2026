@@ -1,0 +1,42 @@
+body{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #004225;
+}
+
+.title{
+    color: goldenrod;
+    font-family: 'Castellar';
+}
+
+.subtitle{
+    color: #004225;
+    font-family: 'Castellar';
+}
+
+.section{
+    border-radius: 15px;
+    border-style: groove;
+    background-color: goldenrod;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    border-radius: 3px;
+    width: 150px;
+    height: 15px;
+}
+
+button{
+    border-radius: 3px;
+    width: 15%;
+    background-color: white;
+}
+button:hover{
+    background-color: whitesmoke;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEECROWD - Exercícios do dia 19/09/2024</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="titulo">
+        <h1>"All night STAGEFRIGHT, on with the show!"</h1>
+    </header>
+    <hr>
+    <h6>Ignore o título, é só fachada.</h6>
+    <hr>
+    <button onclick="bc1115()">Ex.1115 do beecrowd</button><br><br>
+    <script>
+        function bc1115(){
+    let coordX = Number(prompt("Insira a coordenada X!"))
+    let coordY = Number(prompt("Insira a coordenada Y!"))
+    if (coordX > 0 && coordY > 0) {
+        alert("Você está no primeiro quadrante.")
+    } else if(coordX < 0 && coordY > 0){
+        alert("Você está no segundo quadrante.")
+    }else if(coordX < 0 && coordY < 0){
+        alert("Você está no terceiro quadrante.")
+    }else if(coordX > 0 && coordY < 0){
+        alert("Você está no quarto quadrante.")
+    }
+}
+    </script>
+</body>
+</html>

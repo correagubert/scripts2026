@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEECROWD - Exercícios do dia 19/09/2024</title>
+</head>
+<body>
+    <header id="titulo">
+        <h1>"All night STAGEFRIGHT, on with the show!"</h1>
+    </header>
+    <hr>
+    <h6>Ignore o título, é só fachada.</h6>
+    <hr>
+    <button onclick="bc1009()">Ex.1009 do beecrowd</button><br><br>
+    <script>
+    function bc1009(){
+        let nome, salario, vendas, comissao, vendasTotal, salarioTotal
+        nome = prompt("Digite seu nome!")
+        salario = Number(prompt("Qual é o seu salário?"))
+        comissao = Number(prompt("Quanto você recebe por venda?"))
+        vendas = Number(prompt("Quantas vendas foram realizadas?"))
+        vendasTotal = vendas*comissao
+        salarioTotal = salario+comissao
+        alert("Sr. "+nome+" ,você receberá R$"+salarioTotal+" de salário.")
+    }
+    </script>
+</body>
+</html>

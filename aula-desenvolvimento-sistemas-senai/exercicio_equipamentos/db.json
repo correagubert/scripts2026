@@ -1,0 +1,24 @@
+{
+  "equipamentos": [
+    {
+      "id": 1,
+      "nome": "Martelo",
+      "dono": "Marcos"
+    },
+    {
+      "id": 2,
+      "nome": "Escada Dobrável",
+      "dono": "Vanderlei Luxemburgo"
+    },
+    {
+      "nome": "Machadinha",
+      "dono": "Vitor",
+      "id": 3
+    },
+    {
+      "título": "Machadinha",
+      "autor": "Nicolas",
+      "id": 4
+    }
+  ]
+}

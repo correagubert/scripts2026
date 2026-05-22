@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array de Convidados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="titulo">
+        <h1>Lista de Convidados pro Aniversário Super-Especial do Corrêa</h1>
+    </div>
+
+    <div style="text-align: center;">
+        <h3>Insira o nome desejado AQUI:</h3>
+        <label for="nome">NOME:</label>
+        <input type="text" placeholder="Nicolas Corrêa Gubert" id="nome">
+        <button onclick="adiciona()">Adicionar</button>
+        <button onclick="edita()">Editar</button>
+        <button onclick="remove()">Remover</button><br><br>
+        <hr>
+        <h3>CONVIDADOS:</h3>
+        <p id="lista"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
