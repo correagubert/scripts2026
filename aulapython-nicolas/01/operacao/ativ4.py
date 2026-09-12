@@ -1,0 +1,10 @@
+print("Digite seu nome:")
+nomeInput = input()
+print("Digite sua primeira nota:")
+nota1 = int(input())
+print("Digite sua segunda nota:")
+nota2 = int(input())
+print("Digite sua terceira nota:")
+nota3 = int(input())
+media = (nota1+nota2+nota3)/3
+print("Sua média é", media, nomeInput)
