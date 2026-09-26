@@ -1,0 +1,11 @@
+import calc
+number1 = float(input("Digite o primeiro número. "))
+number2 = float(input("Digite o segundo número. "))
+resSum = calc.sum(number1, number2)
+resSubtract = calc.subtract(number1, number2)
+resDivide = calc.divide(number1, number2)
+resMult = calc.mult(number1, number2)
+print(f"Resultado da soma: {resSum}")
+print(f"Resultado da subtração: {resSubtract}")
+print(f"Resultado da divisão: {resDivide}")
+print(f"Resultado da multiplicação: {resMult}")
