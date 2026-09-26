@@ -1,0 +1,5 @@
+imcUser = float(input("Digite o valor de seu IMC. "))
+if imcUser < 18.5: print("Abaixo do peso.")
+elif imcUser < 25.0: print("Peso normal.")
+elif imcUser < 30.0: print("Sobrepeso.")
+else: print("Obesidade.")

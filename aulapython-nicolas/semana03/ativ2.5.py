@@ -1,0 +1,5 @@
+currentHora = int(input("Digite a hora atual, de 00h (meia-noite) até 23h (onze da noite). "))
+if currentHora in range (6, 12): print("Turno da manhã.")
+elif currentHora in range (12, 18): print("Turno da tarde.")
+elif currentHora in range (18, 23): print("Turno da noite.")
+else: print("Fora de expediente.")
