@@ -1,0 +1,9 @@
+python --version
+
+python -m venv .venv
+
+python -m pip install -- grade pip
+
+pip install opencv-python
+
+ctrl-shift-b -> >python: select interpreter (selecionar o .venv)
