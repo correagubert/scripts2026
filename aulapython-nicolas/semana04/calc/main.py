@@ -1,0 +1,16 @@
+import calc # ou: from calc import sum, sub, mult, div
+n1 = float(input("Número 1: "))
+n2 = float(input("Número 2: "))
+
+# print (sum(n1, n2))
+resSum = calc.sum(n1, n2)
+print(resSum)
+# print (sub(n1, n2))
+resSub = calc.sub(n1, n2)
+print(resSub)
+# print (mult(n1, n2))
+resMult = calc.mult(n1, n2)
+print(resMult)
+# print (div(n1, n2))
+resDiv = calc.div(n1, n2)
+print(resDiv)
