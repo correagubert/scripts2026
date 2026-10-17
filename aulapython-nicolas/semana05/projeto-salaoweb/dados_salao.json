@@ -1,0 +1,32 @@
+{
+    "servicos": [
+        {
+            "nome": "Manicure Completa",
+            "valor": 64.99
+        },
+        {
+            "nome": "Corte de Cabelo Masculino",
+            "valor": 89.9
+        }
+    ],
+    "agendamentos": [
+        {
+            "cliente": "Nico",
+            "servico": {
+                "nome": "Manicure Completa",
+                "valor": 64.99
+            },
+            "data": "18/10/2026",
+            "horario": "15:30"
+        },
+        {
+            "cliente": "Eric",
+            "servico": {
+                "nome": "Manicure Completa",
+                "valor": 64.99
+            },
+            "data": "2026-10-18",
+            "horario": "12:30"
+        }
+    ]
+}

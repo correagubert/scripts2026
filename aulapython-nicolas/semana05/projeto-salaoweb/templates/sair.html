@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Saindo...{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card p-5 text-center">
+            <h2 class="mb-3">👋 Até logo!</h2>
+            <p class="text-muted mb-3">O sistema de agendamento foi encerrado.</p>
+            
+            <p class="fs-5" id="contador">Esta aba pode ser fechada em <strong>3</strong> segundos...</p>
+            
+            <p class="small text-muted mt-4">
+                Por segurança, os navegadores não permitem que um site feche a aba automaticamente.<br>
+                Você pode fechá-la quando quiser.
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    let segundos = 3;
+    const contador = document.getElementById("contador");
+
+    const intervalo = setInterval(() => {
+        segundos--;
+        if (segundos > 0) {
+            contador.innerHTML = `Esta aba pode ser fechada em <strong>${segundos}</strong> segundos...`;
+        } else {
+            contador.innerHTML = `<strong>Você já pode fechar esta aba.</strong>`;
+            clearInterval(intervalo);
+        }
+    }, 1000);
+</script>
+{% endblock %}

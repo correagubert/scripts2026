@@ -55,6 +55,10 @@ def main():
                 print("❌ Erro: Digite um número válido.")
                 continue
 
+            if not (0 <= escolha < len(servicos)):
+                print("❌ Erro: Número de serviço inválido.")
+                continue
+
             cliente = input("Nome do cliente: ").strip()
             data = input("Data (DD/MM/AAAA): ").strip()
             

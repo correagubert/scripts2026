@@ -1,45 +1,19 @@
 {
     "servicos": [
         {
-            "nome": "Corte de Unhas",
-            "valor": 64.9
-        },
-        {
-            "nome": "Corte",
-            "valor": 75.5
-        },
-        {
-            "nome": "Manicure",
-            "valor": 84.5
+            "nome": "Manicure Completa",
+            "valor": 64.99
         }
     ],
     "agendamentos": [
         {
-            "cliente": "Eric",
-            "servico": {
-                "nome": "Corte de Unhas",
-                "valor": 64.9
-            },
-            "data": "10/10/2026",
-            "horario": "14:15"
-        },
-        {
-            "cliente": "Jacy",
-            "servico": {
-                "nome": "Corte",
-                "valor": 75.5
-            },
-            "data": "10/10/2026",
-            "horario": "17:00"
-        },
-        {
             "cliente": "Nico",
             "servico": {
-                "nome": "Manicure",
-                "valor": 84.5
+                "nome": "Manicure Completa",
+                "valor": 64.99
             },
-            "data": "01/11/2026",
-            "horario": "15:00"
+            "data": "18/10/2026",
+            "horario": "15:30"
         }
     ]
 }

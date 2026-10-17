@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Realizar Agendamento{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-7">
+        <div class="card p-4">
+            <h3 class="mb-4">Realizar Agendamento</h3>
+
+            {% if not servicos %}
+                <div class="alert alert-warning">
+                    Não há serviços cadastrados. <a href="/cadastrar-servico">Cadastre um serviço primeiro</a>.
+                </div>
+                <a href="/" class="btn btn-secondary">Voltar</a>
+            {% else %}
+                <form method="POST">
+                    <div class="mb-3">
+                        <label class="form-label">Serviço</label>
+                        <select name="servico" class="form-select" required>
+                            <option value="">Selecione um serviço...</option>
+                            {% for s in servicos %}
+                                <option value="{{ loop.index }}">{{ s.nome }} - R$ {{ "%.2f"|format(s.valor) }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Nome do cliente</label>
+                        <input type="text" name="cliente" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Data</label>
+                        <input type="date" name="data" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Horário</label>
+                        <input type="time" name="horario" class="form-control" required>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary">Agendar</button>
+                        <a href="/" class="btn btn-secondary">Voltar</a>
+                    </div>
+                </form>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Início - Sistema de Agendamento{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card p-4">
+            <h2 class="text-center mb-4">Sistema de Agendamento</h2>
+            <div class="d-grid gap-3">
+                <a href="/cadastrar-servico" class="btn btn-primary btn-lg">1. Cadastrar Serviço</a>
+                <a href="/servicos" class="btn btn-outline-primary btn-lg">2. Listar Serviços</a>
+                <a href="/agendar" class="btn btn-primary btn-lg">3. Realizar Agendamento</a>
+                <a href="/agendamentos" class="btn btn-outline-primary btn-lg">4. Visualizar Agendamentos</a>
+                <a href="/sair" class="btn btn-outline-danger btn-lg">5. Sair</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

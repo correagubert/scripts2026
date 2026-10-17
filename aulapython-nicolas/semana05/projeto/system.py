@@ -64,6 +64,7 @@ class Sistema:
             self.agendamentos.append(novo_agendamento)
             self.salvar_dados()
             return True
+        else: print("Agendamento não encontrado.")
         return False
 
     def listar_agendamentos(self) -> list:
